@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: ${SUPABASE_DB_URL:jdbc:postgresql://localhost:5432/postgres}
+    username: ${SUPABASE_DB_USER:postgres}
+    password: ${SUPABASE_DB_PASSWORD:postgres}
+  mail:
+    host: ${SMTP_HOST:smtp.mailtrap.io}
+    port: ${SMTP_PORT:2525}
+    username: ${SMTP_USER:user}
+    password: ${SMTP_PASS:pass}
+
+server:
+  port: 8080
+
+app:
+  jwt:
+    secret: ${APP_JWT_SECRET:replace-with-very-long-secret-key-at-least-32-bytes-1234567890}
+  frontend-url: ${FRONTEND_URL:http://localhost:5173}
